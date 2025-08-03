@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: cadetblue;
+            width: 90%;
+            max-width: 470px;
+            padding: 10px;
+            margin: 100px auto 0;
+            border-radius: 10px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .search input {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            color: #555;
+            height: 60px;
+            border-radius: 30px;
+            flex: 1;
+             padding:0 8px;
+        margin-right: 10px;
+        border-radius: 10px;
+
+
+        }
+        input::placeholder{
+            padding-left: 50px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+
+        #result {
+            background-color: #555;
+            color:#fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:50px;
+            margin-top: 50px;
+            width: 100%;
+            height: 150px;
+            font-size: 30px;
+            border-radius: 10px;
+            scrollbar-width: none;
+        }
+    </style>
+    <div class="container">
+        <div class="search">
+            <input type="text" name="" id="num">
+            <button onclick="number()">click</button>
+        </div>
+        <textarea name="" id="result">
+
+    </textarea>
+    </div>
+    <script>
+        function number() {
+            let num = document.getElementById("num").value;
+            let string = " ";
+            let sum = 0;
+            for (let i = 1; i < num; i++) {
+                if (i % 3 == 0 || i % 5 == 0) {
+                    sum += i;
+                }
+            }
+            document.getElementById("result").innerHTML = sum;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="prime">
+    <button onclick="prime()">prime count</button>
+    <p id="output"></p>
+    <script>
+        function prime(){
+            let n = document.getElementById("prime").value;
+            let string = " ";
+            let count = 1;
+
+            for(let i=2;count<=n;i++){
+                let isPrime = true;
+                for(let j=2;j<i;j++){
+                    if(i %j === 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    string += `${i} = ${count}` + "<br>";
+                    count ++;
+                }
+            }
+            document.getElementById('output').innerHTML = string;
+        }
+    </script>
+</body>
+</html>
