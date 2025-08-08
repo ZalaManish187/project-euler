@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="number()">power Digit Sum</button>
+    <p id="result"></p>
+    <script>
+        function number(){
+            let base = BigInt(2);
+            let power = BigInt(1000);
+           let output = base ** power;
+
+           let digits = output.toString().split('').map(Number);
+
+           let sum = digits.reduce((a , b)=> a + BigInt(b) , 0n);
+            
+            document.getElementById('result').innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

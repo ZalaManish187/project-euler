@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="number()">Sum Square Difference</button>
+    <p id="result"></p>
+    <script>
+        function number(){
+            let n = 100;
+            let Square = 0;
+            let sum = 0;
+            let sumSquare = 0;
+            let output = 0;
+            for(let i=1;i<=n;i++){
+                Square += i * i;
+                sum += i;
+                sumSquare = sum * sum;
+                output = sumSquare - Square;
+            }
+
+            console.log(`${Square}\nsum is ${sum}\nsumSquare is : ${sumSquare}\noutput is : ${output}`);
+        }
+    </script>
+</body>
+</html>
