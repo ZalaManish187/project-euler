@@ -1,1 +1,1 @@
-today i solved problem number 20,25 from project euler
+today i solved problem number 29 from project euler
