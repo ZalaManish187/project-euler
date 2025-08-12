@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="number()">Distinct Number</button>
+    <table border="1">
+        <tbody id="result"></tbody>
+
+        </p>
+        <script>
+            function number() {
+                let output = ' ';
+                let count = 0;
+                let num = [];
+
+                for (let i = 2; i <= 100; i++) {
+                    output += "<tr>";
+                    for (let j = 2; j <= 100; j++) {
+                        let value = i ** j;
+                        output += `<td>${i} ^ ${j} = ${value}</td>`;
+                        count++;
+                        num.push(value);
+
+
+                    }
+                    output += "</tr>";
+
+
+
+                }
+                let answer = new Set(num).size;
+
+                document.getElementById('result').innerHTML = `${output} <br><tr><td>number is : ${answer}</td></tr>`;
+            }
+        </script>
+</body>
+
+</html>
